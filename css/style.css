@@ -1,0 +1,1310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----- basics ----------------------------- */
+body{
+    overflow: hidden;
+    background-color: #5FA5C6;
+    cursor:url(../img/cursor3.png), auto;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+    font-family: neuzeit-grotesk, sans-serif;
+    cursor:url(../img/klikcursor2.png), auto;
+}
+p{
+    color: #ffffff;
+    font-size: 1em;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+}
+button{
+    cursor:url(../img/klikcursor2.png), auto;
+}
+h1{
+    color: #ffffff;
+    font-size: 3em;
+    font-family: coquette, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+    line-height: 50px;
+    text-shadow: rgb(209, 209, 209) 2px;
+}
+h2{
+    color:#359230;
+    font-size: 1.3em;
+    font-family: coquette, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    text-align: center;
+    line-height: 25px;
+}
+h4{
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: neuzeit-grotesk, sans-serif;
+    /* padding: 20px; */
+    font-style: bold;
+    font-weight: 500;
+    text-align: center;
+    line-height: 25px;
+}
+
+/* -------- introductie pagina -------------------------------*/
+#introBg{
+    background-color: #5FA5C6;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.titel{
+    background-color: transparent;
+    position:relative;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    text-align: center;
+    height: fit-content;
+    padding: 20px;
+}
+.titel p.intropagina{
+    width: 680px;
+    padding: auto;
+    margin: 10px auto;
+}
+#introVideo h4{
+    padding-top: 10px;
+}
+#introVideo{
+    background-color: transparent;
+    position: relative;
+    width: 700px;
+    height: 420px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#introVideo iframe{
+    width: 100%;
+    height: 100%;
+}
+#volgendeStap{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    float: none;
+    z-index: 10;
+}
+.socialmedia{
+    background-color: transparent;
+    width: 20px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+.socialmedia img{
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 20;
+}
+.socialmedia img:hover{
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(3px 5px 7px #848f71);
+}
+.wolkintrorechts{
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wolkintrorechts img.wolk2intro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.wolkintrolinks{
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 500px;
+    left: -180px;
+}
+.wolkintrolinks img.wolk1intro{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.blad img{
+    width: 60px;
+    animation: vallen 10s linear infinite;
+}
+.blad{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: -80px;
+    z-index: 10;
+}
+@keyframes vallen{
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+        transform: rotate(180deg);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(120vh);
+    }
+}
+.blad img:nth-child(1){
+    animation-delay: 0s;
+    transform: rotate(90deg);
+}
+.blad img:nth-child(2){
+    animation-delay: 5s;
+}.blad img:nth-child(3){
+    animation-delay: 1s;
+    transform: rotate(180deg);
+}
+.blad img:nth-child(4){
+    animation-delay: 0.2s;
+}
+
+/*---------STARTPAGINA-------------------------------------------*/
+#startBg{
+    background-color: #5FA5C6;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.vergelijkingen img.verill{
+    margin-top: 10px;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.titel img.ExInknop{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 65px;
+    top: 80px;
+    z-index: 15;
+}
+.titel img.ExInknop:hover{
+    cursor: url(../img/klikcursor2.png), auto;
+    filter: drop-shadow(0 0 0.75rem rgb(188, 205, 211));
+}
+#extraInfo p{
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    color: #000;
+}
+#extraInfo img#illustratieondertekst{
+    position: absolute;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#extraInfo{
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    height: 500px;
+    width: 500px;
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 11px;
+    box-shadow: 10px 10px #359230;
+    border: 1px solid #359230;
+    display: none;
+    opacity: 0;
+}
+.show{
+    display: block !important;
+    opacity: 1 !important;
+}
+p.ondertekst{
+    width: 400px;
+    text-align: left;
+    color: #ffffff;
+    position: relative;
+    height: 60px;
+    display: inline;
+    float: left;
+}
+.infoillu{
+    width: 500px;
+    position: relative;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+/* button seizoenen*/
+button.seizoenBtn {
+    position: relative;
+    display: flex;
+    float: right;
+    z-index: 20;
+    align-items: center;
+    background-color: #ffffff;
+    border: 0.1px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    height: 33px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #afafaf44 0px 7px 13px -3px, #a8a8a848 0px -3px 0px inset;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 12px;
+    text-align: center;
+    text-decoration: none;
+} 
+button.seizoenBtn:hover{
+    height: 35px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #8b8b8b44 0px 7px 13px -3px;
+}
+
+/* volgende pagina knop / button meer weten (intropagina)*/
+.praatwolkje{
+    margin-top: 50px;
+    width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+button.naarStad{
+    max-width: 100%;
+    margin-top: 27px;
+    position: relative;
+    background-color: #ffffff;
+    border: 2px solid #359230;
+    border-radius: 30px;
+    box-shadow: #359230 4px 4px 0 0;
+    cursor: url(../img/klikcursor2.png);
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 13px 15px;
+    line-height: 15px;
+    text-align: center;
+    color: black;
+    font-family: coquette, sans-serif;
+    font-weight: 100;
+    animation: zweef 5s ease-in-out infinite;
+}
+button.naarStad:hover {
+    background-color: rgb(236, 247, 235);
+    color: rgb(0, 0, 0);
+}
+@keyframes zweef {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* achtergrond */
+.wolkstartrechts{
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    top: -100px;
+    right: -270px;
+}
+.wolkstartrechts img.wolk2start{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.wolkstartlinks{
+    height: 400px;
+    width: 450px;
+    position: absolute;
+    top: 400px;
+    left: -50px;
+}
+.wolkstartlinks img.wolk1start{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.bovenkantgebouwen{
+    background: url(../img/rflats.png);
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    bottom: -450px;
+    left: 900px;
+    position: absolute;
+}
+.wolkentop{
+    width: 500px;
+    height: 500px;
+    bottom: -300px;
+    left: 900px;
+    position: absolute;
+    opacity: 0.6;
+}
+.wolkentop img.wolktop{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+
+/*STADSTAADSTADSTAD*/
+/*---------stad---------------------------------------------------*/
+.stad{
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+    position: absolute;
+}
+#stadBg{
+    background: url(../img/slucht.png);
+    background-size: cover;
+    width: 2000px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    /* overflow: hidden; */
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#straat{
+    background:url(../img/rrstraat.png);
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90px;
+    width: 100%;
+    z-index: 1;
+}
+.city{
+    width: 6000px;
+    height: 100vh;
+    position: absolute;
+}
+#huizen{
+    z-index: 1;
+}
+.stadintro{
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.stadintro h1{
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 20px auto;
+    line-height: 40px;
+}
+.stadintro h4{
+    color: #ffffff;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 500;
+    position: fixed;
+    top: 90px;
+    left: 50vw;
+    transform: translateX(-50%);
+}
+.logoStad h1{
+    left: 50vw;
+    transform: translateX(-50%);
+    position: fixed;
+}
+.socialmediaStad{
+    background-color: transparent;
+    display: block;
+    width: 120px;
+    height: 30px;
+    position: fixed;
+    right: 10px;
+    top:20px;
+}
+.socialmediaStad img{
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    z-index: 20;
+}
+.socialmediaStad img:hover{
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(3px 5px 7px #ffffff88);
+    cursor: url(../img/klikcursor2.png), auto;
+}
+.terugStad{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    left: 120px;
+    top: 75px;
+    position: fixed;
+    text-align: right;
+    font-size: 15px;
+    font-style: italic;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+.terugStad:hover{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-shadow: #ffffff88;
+    cursor: url(../img/klikcursor2.png), auto;
+}
+span.stadnaam{
+    font-size: 2em;
+}
+button#back p,
+button#forward p{
+    color: #0C4119;
+}
+button#back, 
+button#forward{
+    position: fixed;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 1.1em;
+    font-family: coquette, sans-serif;
+    padding: 0 10px;
+    line-height: 20px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    cursor:url(../img/klikcursor2.png), auto;
+    align-items: center;
+    background-color: #ffffff;
+    border: 0.5px solid #000000;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #35923044 0px 7px 13px -3px, #35923048 0px -3px 0px inset;
+    max-width: 100%;
+}
+button#forward{
+    right: 30px;
+}
+button#back{
+    left: 30px;
+}
+button#forward:hover,
+button#back:hover{
+    background-color: #359230;
+    cursor: url(../img/klikcursor2.png) auto;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, #35923044 0px 7px 13px -3px;
+}
+button#back p:hover,
+button#forward p:hover{
+    color: #ffffff;
+}
+
+/* HULP(BUTTON) */
+.hulpBtn{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    z-index: 50;
+}
+.hulpBtn img{
+    width: 100%;
+    height: 100%;
+}
+.hulpBtn:hover{
+    width: 45px;
+    height: 45px;
+    filter: drop-shadow(3px 5px 7px #ffffff88);
+}
+.help{
+    background-color: #131c17dc;
+    z-index: 40;
+    display: none;
+    opacity: 0;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+button.closeX {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border: none;
+    color: #0C4119;
+    background-color: transparent;
+    font-size: 20px;
+    opacity: 0.7;
+}
+button.closeX:hover {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+.hulpnodig{
+    display: block !important;
+    opacity: 1 !important;
+}
+.uitlegverhaal{
+    background-color: transparent;
+    max-height: 100%;
+    width: 700px;
+    margin: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+}
+.verhaal p{
+    color: black;
+    line-height: 20px;
+    padding: 18px;
+    position: relative;
+}
+.verhaal h2{
+    font-size: 25px;
+}
+.verhaal {
+    color: #000000;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-weight: 500;
+    text-align: left;
+    transform: translateY(0px);
+    mix-blend-mode: multiply;
+    border: 0.1px solid #359230;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 11px;
+    position: relative;
+    box-shadow: 20px 20px #359230;
+    border: 1px solid #359230;
+    z-index: 10;
+    overflow-y: scroll;
+}
+.icoons{
+    float: left;
+    max-width: 50px;
+}
+.verhaal img.hulpicoontje{
+    height: 40px;
+    width: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 8px;
+    display: block;
+}
+.verhaal p.iconsuitleg{
+    line-height: 50px;
+    float: left;
+    width: 550px;
+    padding-left: 30px;
+    font-style: italic;
+    font-size: 15px;
+}
+/*-----INFOWOLKJES--------------------------------------------*/
+.zwart{
+    background-color: #131c17d5;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 40;
+}
+.infowolkje{
+    background-color: transparent;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    opacity: 1; 
+}
+.inhoud{
+    display: none;
+}
+.kolomlinks{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+.kolomlinks img.grid-foto{
+    margin: auto;
+    padding: 7px;
+    float: left;
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+.kolomlinks img.planticon{
+    float: left;
+    margin: 20px 10px 10px 10px;
+    width: 40px;
+    height: 40px;
+}
+.kolomrechts{
+    display: inline;
+    float:  right;
+    width: 50%;
+}
+.informatie h3{
+    font-size: 30px;
+    display: block;
+    margin: auto;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    font-family: coquette, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    color: #359230;
+}
+.informatie p{
+    font-size: 15px;
+    margin-left: 15px;
+    display: block;
+    margin: 2px 0 0 0;
+    color: black;
+    line-height: 20px;
+    font-family: neuzeit-grotesk, sans-serif;
+}
+.informatie a{
+    font-size: 15px;
+    color: black;
+    text-decoration: underline;
+}
+span.opsom{
+    font-size: 15px;
+    color: #359230;
+    font-weight: 700;
+}
+.informatie{
+    text-align: left;
+    background-color: #ffffff;
+    overflow-y: scroll;
+    color: black;
+    mix-blend-mode: multiply;
+    border: 0.1px solid #359230;
+    padding: 20px;
+    border-radius: 11px;
+    box-shadow: 15px 15px #359230;
+    border: 1px solid #359230;
+    height: 500px;
+    width: 800px;
+    margin: 0;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%,-50%);
+    z-index: 30;
+}
+button.weginfo{
+    cursor: url(../img/klikcursor2.png) auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    color: #0C4119;
+    background-color: transparent;
+    font-size: 20px;
+    opacity: 0.7;
+}
+button.weginfo:hover{
+    opacity: 1;
+    transform: rotate(180deg);
+}
+.zichtbaar{
+    opacity: 1;
+    display: inline;
+}
+  
+/*--stad>>de assets-----------------------------------  */
+.huis,
+.boom,
+.groen{
+    position: absolute;
+}
+.huis:hover{
+    cursor:url(../img/klikcursor2.png), auto;
+}
+.huis:hover{
+    transform: scale(1.05);
+}
+.huis:hover .overlay,
+.groen:hover .overlay{
+    opacity: 1;
+}
+.overlay{
+    position: absolute;
+    top: -40px;
+    background: rgba(240, 240, 240, 0.137);
+    width: 95%;
+    transition: .4s ease;
+    opacity: 0;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+.overlay h2{
+    color: white;
+}
+
+/* -------de gebouwen------------------------ */
+#boom1{
+    background: url(../img/rboommetgras.png);
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    bottom: 90px;
+    left: -100px;
+    z-index: 5;
+}
+.wolken1{
+    background: url(../img/rwolk1.png);
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    z-index: 2;
+    opacity: 0.5;
+}
+#gebouw1{
+    background:url(../img/rhuis4snake.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 35px;
+    left: 150px;
+    z-index: 2;
+}
+#boomextra1{
+    background:url(../img/rboomlang.png);
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 25px;
+    left: 350px;
+    z-index: 7;
+}
+#gebouw2{
+    background: url(../img/rhuis2ivy.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 30px;
+    left: 550px;
+    z-index: 5;
+}
+.wolkentopstad1{
+    width: 500px;
+    height: 500px;
+    top: 50px;
+    left: 900px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: 7;
+}
+.wolkentopstad1 img.wolktop{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+#gebouw3{
+    background: url(../img/rflats.png);
+    background-size: contain;
+    width: 550px;
+    height: 550px;
+    bottom: 30px;
+    left: 900px;
+    z-index: 5;
+}
+#boom2{
+    background: url(../img/rboomredtip.png);
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    left: 1340px;
+    bottom: 30px;
+    z-index: 7;
+}
+
+#gebouw4{
+    background: url(../img/rhuisbamboe.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 30px;
+    left: 1510px;
+    z-index: 6;
+}
+.wolken2{
+    background: url(../img/rwolk3.png);
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 1200px;
+    top: 100px;
+    z-index: 2;
+    opacity: 0.5;
+}
+#boom3{
+    background: url(../img/rboom.png);
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 1750px;
+    bottom: 60px;
+    z-index: 7;
+}
+#vogel1{
+    background: url(../img/rvogelvlieg.png);
+    background-size: contain;
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    bottom: 180px;
+    left: 1820px;
+    z-index: 2;
+    transform: scaleX(-1);
+    animation: vliegen 6s linear infinite;
+    animation-delay: 10s;
+}
+@keyframes vliegen{
+    0%{
+        z-index: 2;
+        left: 1820px;
+        bottom: 150px;
+    }
+    5%{
+        z-index: 6;
+    }
+    45%{
+        z-index: 6;
+    }
+    100%{
+        z-index: 2;
+        left: 1200px;
+        bottom: 500px;
+    }
+}
+#gebouw5{
+    background: url(../img/rhuisbosje.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 30px;
+    left: 1880px;
+    z-index: 5;
+}
+
+#groen1{
+    background: url(../img/rgras.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    bottom: 90px;
+    left: 2180px;
+    z-index: 5;
+}
+#groen2{
+    background: url(../img/rboomlang.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    bottom: 90px;
+    left: 2270px;
+    z-index: 6;
+}
+#bijtjes1{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 110px;
+    left: 2200px;
+    z-index: 6;
+    animation: bijen 6s linear infinite;
+}
+@keyframes bijen {
+    100% {transform:rotate(360deg);}
+}
+#bijtjes1 img{
+    width: 10px;
+    height: 10px;
+}
+#bijtjes1 img#bij1{
+    animation: bij 3.2s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+}
+#bijtjes1 img#bij2{
+    animation:bij 2.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+}
+#bijtjes1 img#bij3{
+    animation:bij 2.75s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+}
+@keyframes bij{
+    50% {transform:translateY(-30px);}
+}
+#groen3{
+    background: url(../img/rgras.png);
+    background-size: cover;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 90px;
+    left: 2380px;
+    z-index: 5;
+}
+#gebouw6{
+    background: url(../img/rvilla.png);
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    bottom: 40px;
+    left: 2560px;
+    z-index: 5;
+}
+#boom4{
+    background: url(../img/rboomtak.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    bottom: 30px;
+    left: 2910px;
+    z-index: 6;
+}
+#gebouw7{
+    background: url(../img/rhuis4red.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 30px;
+    left: 3000px;
+    z-index: 2;
+}
+.wolken3{
+    background: url(../img/rwolk1.png);
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 2100px;
+    top: 110px;
+    z-index: 2;
+    opacity: 0.4;
+}
+#boom5{
+    background: url(../img/rboomlang.png);
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 3330px;
+    bottom: 30px;
+    z-index: 2;
+}
+#gebouw8{
+    background: url(../img/rstation.png);
+    background-size: contain;
+    width: 350px;
+    height: 350px;
+    bottom: 30px;
+    left: 3510px;
+    z-index: 5;
+}
+.wolken4{
+    background: url(../img/rwolk1.png);
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 3400px;
+    top: 100px;
+    z-index: 2;
+    opacity: 0.6;
+}
+#groen4{
+    background: url(../img/rgras.png);
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    bottom: 90px;
+    left: 3860px;
+    z-index: 6;
+}
+#boomextra2{
+    background:url(../img/rboomredtip.png);
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 25px;
+    left: 3850px;
+    z-index: 7;
+}
+#gebouw9{
+    background: url(../img/rhuis4sedum.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 30px;
+    left: 4060px;
+    z-index: 5;
+}
+.wolken5{
+    background: url(../img/rwolk2.png);
+    background-size: contain;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 4500px;
+    top: 90px;
+    z-index: 2;
+    opacity: 0.8;
+}
+#gebouw10{
+    background: url(../img/rhuisblokhut.png);
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    bottom: 80px;
+    left: 4460px;
+    z-index: 5;
+}
+#groen5{
+    background: url(../img/rboommetgras.png);
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 4740px;
+    bottom: 90px;
+    z-index: 3;
+}
+#bijtjes2{
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    bottom: 150px;
+    left: 4900px;
+    z-index: 3;
+    animation: bijen2 3s linear infinite;
+}
+@keyframes bijen2 {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+#bijtjes2 img{
+    width: 10px;
+    height: 10px;
+}
+#bijtjes2 img#bij1{
+    animation: bij 2.2s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+}
+#bijtjes2 img#bij2{
+    animation:bij 3.95s cubic-bezier(0.02, 0.01, 0.31, 1) infinite;
+}
+@keyframes bij{
+    50% {
+        transform:translateY(-30px);
+    }
+}
+#boomextra3{
+    background: url(../img/rboomlang.png);
+    background-size: contain;
+    width: 150px;
+    height: 150px;
+    left: 4880px;
+    bottom: 80px;
+    z-index: 3;
+}
+#groen6{
+    background: url(../img/watergc.png);
+    background-size: contain;
+    width: 130px;
+    height: 66px;
+    left: 4935px;
+    bottom: 30px;
+    z-index: 2;
+    transform: scaleX(-1);
+}
+#groen7{
+    background: url(../img/rgras.png);
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 5062px;
+    bottom: 90px;
+    z-index: 3;
+}
+#groen8{
+    background: url(../img/rboomlang.png);
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 5040px;
+    bottom: 75px;
+    z-index: 4;
+}
+#groen9{
+    background: url(../img/rboomtak.png);
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    left: 5170px;
+    bottom: 80px;
+    z-index: 4;
+}
+#groen10{
+    background: url(../img/rgras.png);
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    left: 5280px;
+    bottom: 90px;
+    z-index: 2;
+}
+#vogel2{
+    background: url(../img/rvogelvlieg2.png);
+    background-size: contain;
+    width: 40px;
+    position: absolute;
+    height: 40px;
+    bottom: 180px;
+    left: 5180px;
+    z-index: 2;
+    animation: vliegen2 4s linear infinite;
+    animation-delay: 10s;
+}
+@keyframes vliegen2{
+    0%{
+        z-index: 1;
+        left: 5180px;
+        bottom: 150px;
+    }
+    5%{
+        z-index: 6;
+    }
+    100%{
+        left: 6000px;
+        bottom:250px;
+    }
+}
+#groen11{
+    background: url(../img/rboommetgras.png);
+    background-size: contain;
+    width: 210px;
+    height: 210px;
+    left: 5320px;
+    bottom: 90px;
+    z-index: 2;
+    transform: scaleX(-1);
+}
